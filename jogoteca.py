@@ -4,6 +4,9 @@ app = Flask(__name__)
 
 @app.route('/inicio')
 def ola():
-    return render_template('lista.html', titulo='Jogos') # Jinja2 é a resposável por colocar conteúdo dinâmico nas páginas html
+    lista = ['Tetris', 'Super Mario', 'Pokemon Gold']
+
+    return render_template('lista.html', titulo='Jogos', 
+                                        jogos=lista) # Jinja2 é a resposável por colocar conteúdo dinâmico nas páginas html
 
 app.run()
